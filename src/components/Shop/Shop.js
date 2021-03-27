@@ -7,6 +7,7 @@ import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
+    document.title= 'Shop more';
     const first10 = fakeData.slice(0,10);
     const [products,setProducts] = useState(first10);
     const [cart , setCart] = useState([]);
@@ -50,6 +51,7 @@ const Shop = () => {
     return (
         <div className ="twin-container">
            <div className="product-container">
+            
            
                 {
                     products.map(pd =>    
