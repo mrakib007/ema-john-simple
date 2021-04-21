@@ -15,7 +15,7 @@ const Shipment = () => {
   };
 
   const handlePaymentSuccess = paymentId =>{
-    console.log("form submitted", data);
+    // console.log("form submitted", data);
     const savedCart = getDatabaseCart();
     const orderDetails = {
       ...loggedInUser,
@@ -31,7 +31,7 @@ const Shipment = () => {
       body: JSON.stringify(orderDetails),
     })
       .then((res) => res.json())
-      .the((data) => {
+      .then((data) => {
         if (data) {
           processOrder();
           alert("your order placed successfully");
